@@ -1,34 +1,56 @@
 package net.qiuyu.tinkersmastermind.tinkering.modifier.ranged;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.Arrow;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.phys.EntityHitResult;
+import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
-import slimeknights.tconstruct.library.modifiers.hook.combat.DamageDealtModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.build.ToolStatsModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileHitModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
-import slimeknights.tconstruct.library.tools.context.EquipmentContext;
-import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.IToolContext;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
+import slimeknights.tconstruct.library.tools.stat.ModifierStatsBuilder;
+import slimeknights.tconstruct.library.tools.stat.ToolStats;
+
+import javax.annotation.Nullable;
 
 
-public class DoubleShotModifier extends Modifier implements DamageDealtModifierHook {
+public class DoubleShotModifier extends Modifier implements ProjectileHitModifierHook, ToolStatsModifierHook {
     private final ResourceLocation KEY = new ResourceLocation("tinkersmastermind", "double_shot");
 
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.DAMAGE_DEALT);
+        hookBuilder.addHook(this, ModifierHooks.PROJECTILE_HIT);
     }
 
     @Override
-    public void onDamageDealt(IToolStackView iToolStackView, ModifierEntry modifierEntry, EquipmentContext context, EquipmentSlot equipmentSlot, LivingEntity entity, DamageSource damageSource, float damage, boolean b) {
-        if (entity.isAlive()){
-            boolean previous = entity.isInvulnerable();
-            entity.setInvulnerable(true);
-            entity.hurt(damageSource,damage);
-            entity.setInvulnerable(previous);
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+        // 此处参考了匠魂校准的双折效果.
+        if (target != null && attacker != null
+                && target.isAlive() && projectile instanceof AbstractArrow arrow){
+            float damageDealt = (float) ((float) arrow.getBaseDamage() * arrow.getDeltaMovement().length());
+            target.playSound(SoundEvents.GLASS_BREAK);
+            target.hurt(
+                    new DamageSource(attacker.getCommandSenderWorld().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK)),
+                    damageDealt);
+            target.invulnerableTime = 0;
+        }
+        return false;
+    }
+    @Override
+    public void addToolStats(IToolContext context, ModifierEntry modifierEntry, ModifierStatsBuilder builder) {
+        if (context.hasTag(TinkerTags.Items.RANGED)){
+            ToolStats.ATTACK_SPEED.multiply(builder,0.85f);
         }
     }
 }

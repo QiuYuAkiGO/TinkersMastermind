@@ -1,4 +1,4 @@
-package net.qiuyu.tinkersmastermind.tinkering.modifier.melee;
+package net.qiuyu.tinkersmastermind.tinkering.modifier.defense;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.enchantment.Enchantment;

@@ -1,4 +1,4 @@
-package net.qiuyu.tinkersmastermind.tinkering.modifier.melee;
+package net.qiuyu.tinkersmastermind.tinkering.modifier.defense;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
@@ -13,8 +13,6 @@ import slimeknights.tconstruct.library.modifiers.hook.armor.OnAttackedModifierHo
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-
-import java.util.Map;
 
 public class CoralHardeningModifier extends Modifier implements OnAttackedModifierHook {
     private final ResourceLocation KEY = new ResourceLocation("tinkersmastermind", "coral_hardening");
