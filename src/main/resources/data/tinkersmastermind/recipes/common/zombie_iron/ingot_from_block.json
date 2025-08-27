@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tconstruct:cobalt_ingot",
+  "ingredients": [{ "item": "tinkersmastermind:zombie_iron_block" }],
+  "result": {
+    "item": "tinkersmastermind:zombie_iron",
+    "count": 9
+  }
+}

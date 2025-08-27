@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 1000,
+    "tag": "tconstruct:molten_coral"
+  },
+  "input": "tconstruct:copper",
+  "output": "tconstruct:coral_copper",
+  "temperature": 1000
+}

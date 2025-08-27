@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "tag": "tconstruct:molten_pig_iron",   "amount":   90 },
+    { "tag": "tconstruct:venom", "amount":  250 }
+  ],
+  "result": {
+    "fluid": "tinkersmastermind:molten_zombie_iron",
+    "amount": 180
+  },
+  "temperature": 1000
+}

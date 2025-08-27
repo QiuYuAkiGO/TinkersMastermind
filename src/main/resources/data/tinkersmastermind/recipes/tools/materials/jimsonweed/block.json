@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "tinkersmastermind:jimsonweed"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "tinkersmastermind:jimsonweed",
+  "leftover": {
+    "item": "tinkersmastermind:jimsonweed"
+  }
+}

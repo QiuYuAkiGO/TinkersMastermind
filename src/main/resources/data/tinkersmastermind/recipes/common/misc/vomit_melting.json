@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": { "item": "tinkersmastermind:vomit" },
+  "result": {
+    "fluid": "tconstruct:venom",
+    "amount": 50
+  },
+  "temperature": 1000,
+  "time": 4
+}

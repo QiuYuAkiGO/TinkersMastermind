@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": { "item": "tinkersmastermind:zombie_iron" },
+  "result": {
+    "fluid": "tinkersmastermind:molten_zombie_iron",
+    "amount": 90
+  },
+  "temperature": 1000,
+  "time": 16
+}

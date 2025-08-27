@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": { "item": "tinkersmastermind:jimsonweed" },
+  "result": {
+    "fluid": "tinkersmastermind:molten_jimsonweed",
+    "amount": 90
+  },
+  "temperature": 1000,
+  "time": 16
+}

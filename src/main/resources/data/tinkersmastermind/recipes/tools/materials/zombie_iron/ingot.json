@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "tinkersmastermind:zombie_iron"
+  },
+  "value": 1,
+  "needed": 1,
+  "material": "tinkersmastermind:zombie_iron"
+}

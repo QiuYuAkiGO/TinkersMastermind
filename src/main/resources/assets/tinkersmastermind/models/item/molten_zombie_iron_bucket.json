@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tinkersmastermind:item/molten_zombie_iron_bucket"
+  }
+}

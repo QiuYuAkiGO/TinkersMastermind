@@ -1,0 +1,17 @@
+{
+  "type": "tconstruct:incremental_modifier",
+  "input": {
+    "item": "minecraft:cake"
+  },
+  "amount_per_item": 1,
+  "needed_per_level": 1,
+  "slots": {
+    "upgrades": 1
+  },
+  "allow_crystal": true,
+  "max_level": 3,
+  "tools": {
+    "tag": "tconstruct:modifiable/ranged"
+  },
+  "result": "tinkersmastermind:feeding"
+}

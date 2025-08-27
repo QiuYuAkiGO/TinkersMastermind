@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:modifier",
+  "inputs": [
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    }
+  ],
+  "amount_per_item": 1,
+  "needed_per_level": 1,
+  "slots": {
+    "abilities": 1
+  },
+  "allow_crystal": true,
+  "max_level": 1,
+  "tools": {
+    "tag": "tconstruct:modifiable/ranged/longbows"
+  },
+  "result": "tinkersmastermind:double_shot"
+}

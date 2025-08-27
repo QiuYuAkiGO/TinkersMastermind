@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "fluid": "tinkersmastermind:molten_jimsonweed",
+    "amount": 90
+  },
+  "temperature": 1500,
+  "output": "tinkersmastermind:jimsonweed"
+}

@@ -1,0 +1,20 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:pierce"
+    }
+  ],
+  "perStat": {
+    "tconstruct:skull": [
+      {
+        "level": 1,
+        "name": "tconstruct:strong_bones"
+      },
+      {
+        "level": 1,
+        "name": "tconstruct:skeleton_disguise"
+      }
+    ]
+  }
+}

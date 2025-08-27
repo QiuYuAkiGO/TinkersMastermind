@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": { "tag": "tconstruct:casts/multi_use/ingot" },
+  "cast_consumed": false,
+  "fluid": {
+    "fluid": "tinkersmastermind:molten_coral",
+    "amount": 90
+  },
+  "result": "tinkersmastermind:coral",
+  "cooling_time": 55
+}

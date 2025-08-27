@@ -1,0 +1,53 @@
+modLoader = "javafml"
+loaderVersion = "${loader_range}"
+issueTrackerURL="https://github.com/QiuYu-SHZU/TinkersMastermind/issues"
+license = "MIT"
+[[mods]]
+modId = "tinkersmastermind"
+version = "${file.jarVersion}"
+displayName = "Tinkers' Mastermind"
+logoFile = "logo.png"
+authors = "QiuYuAkiGO"
+description = '''百尺竿头,更近一步.\n感谢您的游玩.'''
+
+[[dependencies.tinkersmastermind]]
+modId="forge"
+mandatory=true
+versionRange="${forge_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.tinkersmastermind]]
+modId="minecraft"
+mandatory=true
+versionRange="${minecraft_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.tinkersmastermind]]
+modId="mantle"
+mandatory=true
+versionRange="[1.11.26,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.tinkersmastermind]]
+modId = "tconstruct"
+mandatory = true
+versionRange = "[3.9.0.8,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.tinkersmastermind]]
+modId="jei"
+mandatory=false
+versionRange="${jei_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.tinkersmastermind]]
+modId="jsonthings"
+mandatory=false
+versionRange="${json_things_range}"
+ordering="NONE"
+side="BOTH"

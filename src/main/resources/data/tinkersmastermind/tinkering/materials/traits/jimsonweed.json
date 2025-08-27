@@ -1,0 +1,26 @@
+ {
+  "perStat": {
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersmastermind:heavy_poison",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "name": "tinkersmastermind:poison_sparkle",
+        "level": 1
+      },
+      {
+        "name": "tinkersmastermind:poison_erosion",
+        "level": 1
+      }
+    ],
+    "tconstruct:plating_shield": [
+      {
+        "level": 1,
+        "name": "tinkersmastermind:poison_sparkle"
+      }
+    ]
+  }
+}

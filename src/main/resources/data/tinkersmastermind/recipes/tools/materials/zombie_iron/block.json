@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "tinkersmastermind:zombie_iron"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "tinkersmastermind:zombie_iron",
+  "leftover": {
+    "item": "tinkersmastermind:zombie_iron"
+  }
+}
