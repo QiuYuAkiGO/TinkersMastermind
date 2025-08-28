@@ -40,6 +40,7 @@ public class DoubleShotModifier extends Modifier implements ProjectileHitModifie
                 && target.isAlive() && projectile instanceof AbstractArrow arrow){
             float damageDealt = (float) ((float) arrow.getBaseDamage() * arrow.getDeltaMovement().length());
             target.playSound(SoundEvents.GLASS_BREAK);
+            target.invulnerableTime = 0;
             target.hurt(
                     new DamageSource(attacker.getCommandSenderWorld().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK)),
                     damageDealt);
