@@ -5,6 +5,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -22,6 +23,7 @@ import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
+import net.qiuyu.tinkersmastermind.register.ModItems;
 
 import javax.annotation.Nullable;
 
@@ -58,12 +60,12 @@ public class FeedingModifier extends Modifier implements ProjectileHitModifierHo
         target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 3));
         target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 3));
         if (attacker != null) {
-            // TODO 找到生成掉落物的正确方法
-//            Collection<ItemEntity> drops = new HashSet<ItemEntity>() {
-//            };
-//            drops.add(new ItemEntity(target.level(), target.getX(), target.getY(), target.getZ(), new ItemStack(ModItems.ZOMBIE_IRON.get())));
-//            int lootingLevel = ForgeHooks.getLootingLevel(target, attacker, target.getLastDamageSource());
-//            ForgeHooks.onLivingDrops(target, target.getLastDamageSource(), drops, lootingLevel,true);
+            // 在服务端生成掉落物：僵尸铁
+            if (!target.level().isClientSide) {
+                ItemEntity drop = new ItemEntity(target.level(), target.getX(), target.getY(), target.getZ(), new ItemStack(ModItems.ZOMBIE_IRON.get()));
+                drop.setDefaultPickUpDelay();
+                target.level().addFreshEntity(drop);
+            }
         }
     }
 
