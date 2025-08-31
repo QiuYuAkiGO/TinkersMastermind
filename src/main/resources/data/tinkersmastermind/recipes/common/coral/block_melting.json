@@ -1,6 +1,10 @@
 {
   "type": "tconstruct:melting",
+<<<<<<< HEAD
   "ingredient": { "tag": "tinkersmastermind:corals" },
+=======
+  "ingredient": { "tag": "minecraft:corals" },
+>>>>>>> baf182fceb5437ddc46569ad22ad3bb38208f9d5
   "result": {
     "fluid": "tinkersmastermind:molten_coral",
     "amount": 810
