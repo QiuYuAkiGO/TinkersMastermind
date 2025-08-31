@@ -22,6 +22,7 @@ public class ModLangGenCN extends LanguageProvider {
         add(ModBlocks.JIMSONWEED_BLOCK.get(), "曼陀罗合金块");
         add(ModItems.JIMSONWEED.get(), "曼陀罗合金");
         add("material.tinkersmastermind.jimsonweed","曼陀罗");
+        add("material.tinkersmastermind.coral","珊瑚");
         add(ModItems.VOMIT.get(), "呕吐物");
         add(ModItems.INSOLE.get(), "鞋垫");
         add(ModEffects.POISON_RESIST.get(),"猛毒耐性");
