@@ -1,19 +1,15 @@
 {
-  "default": [
-    {
-      "level": 1,
-      "name": "tconstruct:pierce"
-    }
-  ],
   "perStat": {
-    "tconstruct:skull": [
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkersmastermind:coral_healing",
+        "level": 1
+      }
+    ],
+    "tconstruct:armor": [
       {
         "level": 1,
-        "name": "tconstruct:strong_bones"
-      },
-      {
-        "level": 1,
-        "name": "tconstruct:skeleton_disguise"
+        "name": "tinkersmastermind:coral_hardening"
       }
     ]
   }

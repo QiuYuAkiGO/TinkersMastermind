@@ -19,23 +19,35 @@ public class ModLangGenCN extends LanguageProvider {
         add(ModItems.ZOMBIE_IRON.get(), "僵尸铁");
         add(ModBlocks.ZOMBIE_IRON_BLOCK.get(), "僵尸铁块");
         add("material.tinkersmastermind.zombie_iron","僵尸铁");
+
         add(ModBlocks.JIMSONWEED_BLOCK.get(), "曼陀罗合金块");
         add(ModItems.JIMSONWEED.get(), "曼陀罗合金");
         add("material.tinkersmastermind.jimsonweed","曼陀罗");
+
+        add(ModItems.CORAL.get(), "珊瑚");
         add("material.tinkersmastermind.coral","珊瑚");
+
         add(ModItems.VOMIT.get(), "呕吐物");
         add(ModItems.INSOLE.get(), "鞋垫");
         add(ModEffects.POISON_RESIST.get(),"猛毒耐性");
         add(ModEffects.FOOT_CLEAN.get(),"干净的脚");
         add(ModEffects.FOOT_ODOR.get(),"脚臭");
+
         add("modifier.tinkersmastermind.insole.description","记得洗脚.");
         add("itemGroup.tinkersmastermind.tab","匠魂长阶");
+
         add("item.tinkersmastermind.molten_zombie_iron_bucket", "熔融僵尸铁桶");
         add("fluid_type.tinkersmastermind.molten_zombie_iron", "熔融僵尸铁");
         add("block.tinkersmastermind.molten_zombie_iron_fluid", "熔融僵尸铁");
+
         add("fluid_type.tinkersmastermind.molten_jimsonweed", "熔融曼陀罗合金");
         add("block.tinkersmastermind.molten_jimsonweed_fluid", "熔融曼陀罗合金");
         add("item.tinkersmastermind.molten_jimsonweed_bucket", "熔融曼陀罗合金桶");
+
+        add("fluid_type.tinkersmastermind.molten_coral", "熔融珊瑚");
+        add("item.tinkersmastermind.molten_coral_bucket", "熔融珊瑚桶");
+        add("block.tinkersmastermind.molten_coral_fluid", "熔融珊瑚");
+
         add("modifier.tinkersmastermind.rotten","霉味");
         add("modifier.tinkersmastermind.hungry","我饿了");
         add("modifier.tinkersmastermind.bluster","爆裂");
@@ -63,6 +75,12 @@ public class ModLangGenCN extends LanguageProvider {
         add("modifier.tinkersmastermind.poison_erosion.description","尽量不要碰这个东西,会中毒.");
         add("modifier.tinkersmastermind.heavy_poison.flavor","不能舔.");
         add("modifier.tinkersmastermind.heavy_poison.description","攻击会施加中毒效果.目标剩余中毒时间越长,伤害越高");
+        add("modifier.tinkersmastermind.coral_healing","珊瑚愈合");
+        add("modifier.tinkersmastermind.coral_healing.flavor","海洋的祝福.");
+        add("modifier.tinkersmastermind.coral_healing.description","攻击或挖掘后有概率产生生命恢复效果.");
+        add("modifier.tinkersmastermind.coral_hardening","珊瑚硬化");
+        add("modifier.tinkersmastermind.coral_hardening.flavor","海洋的守护.");
+        add("modifier.tinkersmastermind.coral_hardening.description","受到攻击后按伤害比例产生伤害抗性.");
 
     }
 }
