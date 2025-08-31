@@ -31,7 +31,9 @@ public class ModLangGenCN extends LanguageProvider {
         add("itemGroup.tinkersmastermind.tab","匠魂长阶");
         add("item.tinkersmastermind.molten_zombie_iron_bucket", "熔融僵尸铁桶");
         add("fluid_type.tinkersmastermind.molten_zombie_iron", "熔融僵尸铁");
+        add("block.tinkersmastermind.molten_zombie_iron_fluid", "熔融僵尸铁");
         add("fluid_type.tinkersmastermind.molten_jimsonweed", "熔融曼陀罗合金");
+        add("block.tinkersmastermind.molten_jimsonweed_fluid", "熔融曼陀罗合金");
         add("item.tinkersmastermind.molten_jimsonweed_bucket", "熔融曼陀罗合金桶");
         add("modifier.tinkersmastermind.rotten","霉味");
         add("modifier.tinkersmastermind.hungry","我饿了");
