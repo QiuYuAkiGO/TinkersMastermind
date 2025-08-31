@@ -2,10 +2,7 @@ package net.qiuyu.tinkersmastermind.register;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.qiuyu.tinkersmastermind.TinkersMastermind;
-import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.FootOdorModifier;
-import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.HungryModifier;
-import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.PoisonErosionModifier;
-import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.PoisonSparkleModifier;
+import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.*;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.HeavyPoisonModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.RottenModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.ranged.BlusterModifier;
@@ -28,4 +25,6 @@ public class ModModifiers {
     public static final StaticModifier<PoisonSparkleModifier> PoisonSparkle = MODIFIERS.register("poison_sparkle", PoisonSparkleModifier::new);
     public static final StaticModifier<PoisonErosionModifier> PoisonErosion = MODIFIERS.register("poison_erosion", PoisonErosionModifier::new);
     public static final StaticModifier<Modifier> DoubleShot = MODIFIERS.register("double_shot", DoubleShotModifier::new);
+    public static final StaticModifier<Modifier> CoralHealing = MODIFIERS.register("coral_healing", CoralHealingModifier::new);
+    public static final StaticModifier<Modifier> CoralHardening = MODIFIERS.register("coral_hardening", CoralHardeningModifier::new);
 }

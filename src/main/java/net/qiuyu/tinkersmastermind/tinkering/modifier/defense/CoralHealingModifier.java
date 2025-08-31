@@ -26,9 +26,9 @@ public class CoralHealingModifier extends Modifier implements MeleeHitModifierHo
     public void afterBlockBreak(IToolStackView iToolStackView, ModifierEntry entry, ToolHarvestContext context) {
         LivingEntity entity = context.getLiving();
         if (entity instanceof Player){
-            // 攻击或挖掘时有35%概率获得2秒生命回复2效果，每级增加2秒，最多3级
+            // 攻击或挖掘后有35%概率获得2秒生命回复3效果，每级增加2秒
             if (RANDOM.nextInt(100) < 35){
-                entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, entry.getLevel()*40, 1));
+                entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, entry.getLevel()*40, 2));
             }
         }
     }
@@ -37,9 +37,9 @@ public class CoralHealingModifier extends Modifier implements MeleeHitModifierHo
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity entity = context.getAttacker();
         if (entity instanceof Player){
-            // 攻击或挖掘时有35%概率获得2秒生命回复2效果，每级增加2秒，最多3级
+            // 攻击或挖掘后有35%概率获得2秒生命回复3效果，每级增加2秒
             if (RANDOM.nextInt(100) < 35){
-                entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, modifier.getLevel()*40, 1));
+                entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, modifier.getLevel()*40, 2));
             }
         }
     }
