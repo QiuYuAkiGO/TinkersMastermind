@@ -1,10 +1,6 @@
 {
   "craftable": true,
-<<<<<<< HEAD
-  "hidden": true,
-=======
   "hidden": false,
->>>>>>> baf182fceb5437ddc46569ad22ad3bb38208f9d5
   "sortOrder": 3,
   "tier": 1
 }
