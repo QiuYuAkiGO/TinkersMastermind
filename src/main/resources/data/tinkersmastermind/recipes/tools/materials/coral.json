@@ -1,11 +1,7 @@
 {
   "type": "tconstruct:material",
   "ingredient": {
-<<<<<<< HEAD
     "tag": "tinkersmastermind:corals"
-=======
-    "tag": "minecraft:corals"
->>>>>>> baf182fceb5437ddc46569ad22ad3bb38208f9d5
   },
   "material": "tinkersmastermind:coral",
   "needed": 2,
