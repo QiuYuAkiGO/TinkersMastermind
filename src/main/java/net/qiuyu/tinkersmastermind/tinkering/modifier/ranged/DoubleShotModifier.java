@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
 import java.util.function.Predicate;
 
 public class DoubleShotModifier extends Modifier implements BowAmmoModifierHook,ProjectileLaunchModifierHook, ProjectileHitModifierHook, ToolStatsModifierHook {
-    private final ResourceLocation KEY = new ResourceLocation("modid", "double_shot"); 
+    private final ResourceLocation KEY = new ResourceLocation("tinkersmastermind", "double_shot"); 
 
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
