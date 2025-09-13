@@ -17,6 +17,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.qiuyu.tinkersmastermind.TinkersMastermind;
+import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -33,6 +34,7 @@ import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber(modid = TinkersMastermind.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ChargeModifier extends Modifier implements ProjectileHitModifierHook, ProjectileLaunchModifierHook {
+  private final ResourceLocation KEY = new ResourceLocation("tinkersmastermind", "charge");
   private static final ResourceLocation KEY_DRAWN = new ResourceLocation("tinkersmastermind", "charge_drawn");
   private static final ResourceLocation KEY_FULLY = new ResourceLocation("tinkersmastermind", "charge_full");
   private static final ResourceLocation KEY_MAX_TICKS = new ResourceLocation("tinkersmastermind", "charge_max_ticks");
@@ -53,7 +55,7 @@ public class ChargeModifier extends Modifier implements ProjectileHitModifierHoo
     if (!player.isUsingItem()) return;
 
     ItemStack stack = event.getItem();
-    if (stack == null || stack.isEmpty()) return;
+    if (stack.isEmpty()) return;
     if (stack.getUseAnimation() != UseAnim.BOW) return; // 仅针对弓
 
     // 计算该弓的最大蓄力刻数（默认20tick，按DRAW_SPEED修正）
@@ -65,7 +67,6 @@ public class ChargeModifier extends Modifier implements ProjectileHitModifierHoo
         drawSpeed = tool.getStats().get(ToolStats.DRAW_SPEED);
         if (drawSpeed <= 0) drawSpeed = 1.0f;
       } catch (Throwable ignored) {
-        drawSpeed = 1.0f;
       }
       maxTicks = 20.0f / drawSpeed;
     } catch (IllegalArgumentException ignored) {
@@ -96,11 +97,14 @@ public class ChargeModifier extends Modifier implements ProjectileHitModifierHoo
     LivingEntity entity = event.getEntity();
     if (!(entity instanceof Player player)) return;
     DamageSource source = event.getSource();
-    if (source == null || !(source.is(DamageTypes.DROWN) || source.is(DamageTypes.IN_WALL))) return;
+    if (source == null
+            || !(source.is(DamageTypes.DROWN)
+            || source.is(DamageTypes.IN_WALL)
+            || source.is(DamageTypes.DRY_OUT))) return;
     if (!player.isUsingItem()) return;
 
     ItemStack using = player.getUseItem();
-    if (using == null || using.isEmpty()) return;
+    if (using.isEmpty()) return;
     if (using.getUseAnimation() != UseAnim.BOW) return; // 仅对弓生效
 
     float maxTicks = 20.0f;
@@ -111,7 +115,6 @@ public class ChargeModifier extends Modifier implements ProjectileHitModifierHoo
         drawSpeed = tool.getStats().get(ToolStats.DRAW_SPEED);
         if (drawSpeed <= 0) drawSpeed = 1.0f;
       } catch (Throwable ignored) {
-        drawSpeed = 1.0f;
       }
       maxTicks = 20.0f / drawSpeed;
     } catch (IllegalArgumentException ignored) {
@@ -131,7 +134,7 @@ public class ChargeModifier extends Modifier implements ProjectileHitModifierHoo
     boolean fullyCharged = drawn >= 20; // 原版弓的满蓄力判定
 
     ItemStack bow = event.getBow();
-    if (bow != null && !bow.isEmpty()) {
+    if (!bow.isEmpty()) {
       try {
         // 将数据写入工具的持久化数据，供发射时读取
         ToolStack tool = ToolStack.from(bow);

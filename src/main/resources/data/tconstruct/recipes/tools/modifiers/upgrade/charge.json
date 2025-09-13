@@ -1,0 +1,23 @@
+{
+  "type": "tconstruct:modifier",
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    }
+  ],
+  "amount_per_item": 1,
+  "needed_per_level": 1,
+  "max_level": 1,
+  "level": 1,
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/ranged/longbow"
+  },
+  "result": "tinkersmastermind:charge"
+}

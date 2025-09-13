@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "fluid": "tinkersmastermind:molten_coral",
+    "amount": 90
+  },
+  "temperature": 1000,
+  "output": "tinkersmastermind:coral",
+  "cooling_time": 60
+}

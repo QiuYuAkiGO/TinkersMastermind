@@ -6,6 +6,7 @@ import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.*;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.HeavyPoisonModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.RottenModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.ranged.BlusterModifier;
+import net.qiuyu.tinkersmastermind.tinkering.modifier.ranged.ChargeModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.ranged.DoubleShotModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.ranged.FeedingModifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
@@ -27,4 +28,5 @@ public class ModModifiers {
     public static final StaticModifier<Modifier> DoubleShot = MODIFIERS.register("double_shot", DoubleShotModifier::new);
     public static final StaticModifier<Modifier> CoralHealing = MODIFIERS.register("coral_healing", CoralHealingModifier::new);
     public static final StaticModifier<Modifier> CoralHardening = MODIFIERS.register("coral_hardening", CoralHardeningModifier::new);
+    public static final StaticModifier<Modifier> Charge = MODIFIERS.register("charge", ChargeModifier::new);
 }

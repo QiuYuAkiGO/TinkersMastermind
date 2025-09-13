@@ -11,6 +11,12 @@
         "level": 1,
         "name": "tinkersmastermind:coral_hardening"
       }
+    ],
+    "tconstruct:plating_shield": [
+      {
+        "level": 1,
+        "name": "tinkersmastermind:coral_hardening"
+      }
     ]
   }
 }

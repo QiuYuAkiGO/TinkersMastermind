@@ -80,7 +80,7 @@ public class ModLangGenCN extends LanguageProvider {
         add("modifier.tinkersmastermind.coral_healing.description","攻击或挖掘后有概率产生生命恢复效果.");
         add("modifier.tinkersmastermind.coral_hardening","珊瑚硬化");
         add("modifier.tinkersmastermind.coral_hardening.flavor","海洋的守护.");
-        add("modifier.tinkersmastermind.coral_hardening.description","受到攻击后按伤害比例产生伤害抗性.");
+        add("modifier.tinkersmastermind.coral_hardening.description","溺水时,减少受到的窒息伤害,回复氧气值与速度提升效果.");
 
     }
 }

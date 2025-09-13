@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "tinkersmastermind:coral"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "tinkersmastermind:coral",
+  "leftover": {
+    "item": "tinkersmastermind:coral"
+  }
+}
