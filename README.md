@@ -28,4 +28,10 @@ Tinkers-Construct-Development-Manual: https://github.com/LitterWolf-fufu/Tinkers
 
 Tinkers Calibration: https://github.com/Jamesdsj/TinkersCalibration
 
+建议和问题反馈: 
+==========
+请踊跃在issue中提出你的看法,包括新的材料(new feature)和缺陷(bugs)等任何有助于该模组的建议,工作日24小时内回复(节假日看心情).
 
+你的建议会让这个模组更好.
+
+私下聊我可能会忘掉,但挂在issue里的那是真的要处理(什).
