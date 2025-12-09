@@ -3,8 +3,7 @@ package net.qiuyu.tinkersmastermind.register;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.qiuyu.tinkersmastermind.TinkersMastermind;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.*;
-import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.HeavyPoisonModifier;
-import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.RottenModifier;
+import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.*;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.ranged.BlusterModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.ranged.ChargeModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.ranged.DoubleShotModifier;
@@ -29,4 +28,8 @@ public class ModModifiers {
     public static final StaticModifier<Modifier> CoralHealing = MODIFIERS.register("coral_healing", CoralHealingModifier::new);
     public static final StaticModifier<Modifier> CoralHardening = MODIFIERS.register("coral_hardening", CoralHardeningModifier::new);
     public static final StaticModifier<Modifier> Charge = MODIFIERS.register("charge", ChargeModifier::new);
+    public static final StaticModifier<Modifier> ShieldBreaking = MODIFIERS.register("shield_breaking", ShieldBreaking::new);
+    public static final StaticModifier<Modifier> Smash = MODIFIERS.register("smash",SmashModifier::new);
+    public static final StaticModifier<Modifier> Stickin = MODIFIERS.register("stickin",StickinModifier::new);
+    public static final StaticModifier<Modifier> LeapSlash = MODIFIERS.register("leap_slash",LeapSlashModifier::new);
 }

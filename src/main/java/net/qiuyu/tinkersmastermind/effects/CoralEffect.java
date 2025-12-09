@@ -15,7 +15,6 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.qiuyu.tinkersmastermind.register.ModEffects;
-import net.qiuyu.tinkersmastermind.register.ModTags;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CoralEffect extends BaseEffect {

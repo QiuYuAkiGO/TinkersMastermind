@@ -12,12 +12,13 @@
   "amount_per_item": 1,
   "needed_per_level": 1,
   "max_level": 1,
+  "allow_crystal": true,
   "level": 1,
   "slots": {
     "abilities": 1
   },
   "tools": {
-    "tag": "tconstruct:modifiable/ranged/longbow"
+    "item": "tconstruct:longbow"
   },
   "result": "tinkersmastermind:charge"
 }

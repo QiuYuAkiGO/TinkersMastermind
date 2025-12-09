@@ -1,0 +1,27 @@
+{
+  "type": "tconstruct:modifier",
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:slime_block"
+    },
+    {
+      "item":"minecraft:iron_block"
+    }
+  ],
+  "amount_per_item": 1,
+  "needed_per_level": 1,
+  "max_level": 1,
+  "allow_crystal": true,
+  "level": 1,
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "item": "tconstruct:sledge_hammer"
+  },
+  "result": "tinkersmastermind:smash"
+}

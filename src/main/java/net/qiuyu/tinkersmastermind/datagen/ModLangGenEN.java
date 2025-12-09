@@ -25,6 +25,9 @@ public class ModLangGenEN extends LanguageProvider {
         add(ModEffects.POISON_RESIST.get(),"Poison Resistance");
         add(ModEffects.FOOT_CLEAN.get(),"Clean Feet");
         add(ModEffects.FOOT_ODOR.get(),"Feet Odor");
+        add("modifier.tinkersmastermind.shield_breaking","Shield breaker");
+        add("modifier.tinkersmastermind.smash","Smashing");
+        add("modifier.tinkersmastermind.stickin","Stick in");
         add("modifier.tinkersmastermind.insole.description","Remember to wash your feet.");
         add("fluid_type.tinkersmastermind.molten_zombie_iron", "Molten Zombie Iron");
         add("item.tinkersmastermind.molten_zombie_iron_bucket", "Molten Zombie Iron Bucket");

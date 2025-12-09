@@ -1,0 +1,26 @@
+{
+  "type": "tconstruct:modifier",
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item":"minecraft:quartz"
+    }
+  ],
+  "amount_per_item": 1,
+  "needed_per_level": 1,
+  "max_level": 2,
+  "level": 1,
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "item": "tconstruct:dagger"
+  },
+  "result": "tinkersmastermind:stickin"
+}
