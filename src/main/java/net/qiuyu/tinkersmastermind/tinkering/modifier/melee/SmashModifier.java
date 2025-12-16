@@ -36,6 +36,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import slimeknights.tconstruct.tools.modifiers.ability.sling.SlingModifier;
 import slimeknights.tconstruct.tools.TinkerTools;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 
 /** Add velocity to the target away from yourself */
 public class SmashModifier extends SlingModifier implements MeleeHitModifierHook, MeleeDamageModifierHook {
@@ -113,7 +114,20 @@ public class SmashModifier extends SlingModifier implements MeleeHitModifierHook
             // send it flying
             float inaccuracy = ModifierUtil.getInaccuracy(tool, player) * 0.0075f;
             RandomSource random = player.getRandom();
-            target.knockback(f, -look.x + random.nextGaussian() * inaccuracy, -look.z + random.nextGaussian() * inaccuracy);
+            double resist = target.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE);
+double y = f * (1.0 - resist);
+
+Vec3 dir = target.position()
+        .subtract(player.position())
+        .normalize();
+
+target.setDeltaMovement(
+    dir.x * 0.15,
+    y,
+    dir.z * 0.15
+);
+
+target.hasImpulse = true;
 
             // spawn the bonk particle
             ToolAttackUtil.spawnAttackParticle(TinkerTools.bonkAttackParticle.get(), player, 0.6d);

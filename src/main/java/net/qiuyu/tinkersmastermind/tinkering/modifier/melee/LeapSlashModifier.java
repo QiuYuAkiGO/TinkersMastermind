@@ -41,7 +41,9 @@ public class LeapSlashModifier extends Modifier implements MeleeDamageModifierHo
         LivingEntity attacker = context.getAttacker();
         LivingEntity target = context.getLivingTarget();
         if (target != null && !attacker.onGround()) {
-            return damage + 1.5f;
+            float fallDistance = attacker.fallDistance;
+            float additionalDamage = Math.min(3.0f*modifier.getLevel(),fallDistance);
+            return damage + additionalDamage;
         }
         return damage;
     }

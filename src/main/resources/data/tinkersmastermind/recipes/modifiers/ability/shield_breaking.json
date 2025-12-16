@@ -3,16 +3,16 @@
   "check_trait_level": true,
   "inputs": [
     {
-      "item": "minecraft:sticky_piston",
-      "count":2
+      "item": "minecraft:flint",
+      "count":3
     },
     {
-      "item": "tconstruct:sky_slime_block",
-      "count":2
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item":"minecraft:coal_block"
     }
   ],
-  "amount_per_item": 1,
-  "needed_per_level": 1,
   "max_level": 1,
   "allow_crystal": true,
   "level": 1,
@@ -22,5 +22,5 @@
   "tools": {
     "item": "tconstruct:cleaver"
   },
-  "result": "tinkersmastermind:leap_slash"
+  "result": "tinkersmastermind:shield_breaking"
 }
