@@ -93,6 +93,10 @@ public class ModLangGenCN extends LanguageProvider {
         add("modifier.tinkersmastermind.coral_healing","珊瑚愈合");
         add("modifier.tinkersmastermind.coral_healing.flavor","海洋的祝福.");
         add("modifier.tinkersmastermind.coral_healing.description","攻击或挖掘后有概率产生生命恢复效果.");
+
+        add("modifier.tinkersmastermind.coral_boost","珊瑚动力");
+        add("modifier.tinkersmastermind.coral_boost.flavor","更强的生命力.");
+        add("modifier.tinkersmastermind.coral_boost.description","提高最大生命值上限.");
         add("modifier.tinkersmastermind.coral_hardening","珊瑚硬化");
         add("modifier.tinkersmastermind.coral_hardening.flavor","海洋的守护.");
         add("modifier.tinkersmastermind.coral_hardening.description","溺水时,减少受到的窒息伤害,回复氧气值与速度提升效果.");

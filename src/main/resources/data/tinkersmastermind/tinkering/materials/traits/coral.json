@@ -4,18 +4,38 @@
       {
         "name": "tinkersmastermind:coral_healing",
         "level": 1
+      },
+      {
+        "name": "tinkersmastermind:coral_boost",
+        "level": 1
       }
     ],
     "tconstruct:armor": [
       {
         "level": 1,
         "name": "tinkersmastermind:coral_hardening"
+      },
+      {
+        "level": 1,
+        "name": "tinkersmastermind:coral_healing"
+      },
+      {
+        "level": 1,
+        "name": "tinkersmastermind:coral_boost"
       }
     ],
     "tconstruct:plating_shield": [
       {
         "level": 1,
         "name": "tinkersmastermind:coral_hardening"
+      },
+      {
+        "level": 1,
+        "name": "tinkersmastermind:coral_healing"
+      },
+      {
+        "level": 1,
+        "name": "tinkersmastermind:coral_boost"
       }
     ]
   }
