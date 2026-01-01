@@ -1,4 +1,4 @@
-package net.qiuyu.tinkersmastermind.tinkering.modifier.defense;
+package net.qiuyu.tinkersmastermind.tinkering.modifier.melee;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -8,6 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
+import slimeknights.tconstruct.library.modifiers.hook.behavior.ToolDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.mining.BlockBreakModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
@@ -15,13 +16,14 @@ import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.context.ToolHarvestContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-public class CoralHealingModifier extends Modifier implements MeleeHitModifierHook, BlockBreakModifierHook {
-    private final ResourceLocation KEY = new ResourceLocation("tinkersmastermind", "coral_healing");
+public class CoralHealingModifier extends Modifier implements ToolDamageModifierHook, MeleeHitModifierHook, BlockBreakModifierHook {
 
+    private final ResourceLocation KEY = new ResourceLocation("tinkersmastermind", "coral_healing");
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.MELEE_HIT, ModifierHooks.BLOCK_BREAK);
+        hookBuilder.addHook(this, ModifierHooks.TOOL_DAMAGE,ModifierHooks.MELEE_HIT, ModifierHooks.BLOCK_BREAK);
     }
+
     @Override
     public void afterBlockBreak(IToolStackView iToolStackView, ModifierEntry entry, ToolHarvestContext context) {
         LivingEntity entity = context.getLiving();
@@ -42,5 +44,20 @@ public class CoralHealingModifier extends Modifier implements MeleeHitModifierHo
                 entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, modifier.getLevel()*40, 2));
             }
         }
+    }
+
+    @Override
+    public int onDamageTool(IToolStackView tool, ModifierEntry modifier, int damage, LivingEntity holder) {
+        if (damage > 0
+                && !tool.isBroken()
+                && holder instanceof Player player
+                && !holder.level().isClientSide) {
+            int level = Math.min(modifier.getLevel(), 3);
+            float healAmount = (float) damage * (level + 1);
+            if (healAmount > 0) {
+                player.heal(healAmount);
+            }
+        }
+        return damage;
     }
 }

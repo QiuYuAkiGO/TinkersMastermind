@@ -26,6 +26,7 @@ public class ModModifiers {
     public static final StaticModifier<PoisonErosionModifier> PoisonErosion = MODIFIERS.register("poison_erosion", PoisonErosionModifier::new);
     public static final StaticModifier<Modifier> DoubleShot = MODIFIERS.register("double_shot", DoubleShotModifier::new);
     public static final StaticModifier<Modifier> CoralHealing = MODIFIERS.register("coral_healing", CoralHealingModifier::new);
+    public static final StaticModifier<Modifier> CoralBoost = MODIFIERS.register("coral_boost", CoralBoostModifier::new);
     public static final StaticModifier<Modifier> CoralHardening = MODIFIERS.register("coral_hardening", CoralHardeningModifier::new);
     public static final StaticModifier<Modifier> Charge = MODIFIERS.register("charge", ChargeModifier::new);
     public static final StaticModifier<Modifier> ShieldBreaking = MODIFIERS.register("shield_breaking", ShieldBreaking::new);
