@@ -1,0 +1,45 @@
+name: Release Mod
+
+on:
+  push:
+    tags:
+      - "v*"  # 只有当推送以 'v' 开头的标签时触发 (例如 v1.0.0, v1.0.1)
+
+permissions:
+  contents: write # 必须赋予写权限，以便 Action 能创建 Release
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code (检出代码)
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17 (设置 Java 17)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          # 你的 build.gradle 中指定了 Java 17
+          java-version: '17'
+
+      - name: Setup Gradle (设置 Gradle)
+        uses: gradle/actions/setup-gradle@v4
+        # 这个 Action 会自动处理 Gradle Wrapper 和缓存，加快构建速度
+
+      - name: Grant execute permission for gradlew (赋予 gradlew 执行权限)
+        run: chmod +x gradlew
+
+      - name: Build with Gradle (构建模组)
+        run: ./gradlew build
+        # 这一步会生成 jar 文件，通常位于 build/libs/ 目录下
+
+      - name: Create Release and Upload Assets (发布并上传附件)
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          # 上传 build/libs 下所有的 jar 文件
+          # 你的 build.gradle 中 archivesName = mod_id，所以文件名会包含 mod_id
+          files: build/libs/*.jar
+          # 自动根据提交记录生成发布日志
+          generate_release_notes: true
