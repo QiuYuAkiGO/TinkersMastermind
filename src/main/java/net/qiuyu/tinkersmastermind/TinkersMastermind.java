@@ -2,8 +2,6 @@ package net.qiuyu.tinkersmastermind;
 
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -26,16 +24,11 @@ public class TinkersMastermind {
         MinecraftForge.EVENT_BUS.register(this);
         ModItems.ITEMS.register(bus);
         ModBlocks.BLOCKS.register(bus);
+        ModBlockEntities.BLOCK_ENTITIES.register(bus);
         ModFluids.FLUIDS.register(bus);
+        ModCreativeTabs.CREATIVE_MODE_TABS.register(bus);
         ModModifiers.MODIFIERS.register(bus);
         ModEffects.EFFECTS.register(bus);
-        CreativeModeTab.builder()
-                .title(CreativeModeTab.builder().title(net.minecraft.network.chat.Component.translatable("itemGroup.tinkersmastermind.tab")).build().getDisplayName())
-                .icon(() -> new ItemStack(ModItems.ZOMBIE_IRON.get()))
-                .displayItems((parameters, output) -> {
-                    output.accept(ModItems.ZOMBIE_IRON.get());
-                })
-                .build();
         ModRecipes.register(bus);
     }
 

@@ -19,9 +19,12 @@ public class ModLangGenEN extends LanguageProvider {
         add(ModItems.ZOMBIE_IRON.get(), "Zombie Iron");
         add(ModBlocks.ZOMBIE_IRON_BLOCK.get(), "Zombie Iron Block");
         add(ModBlocks.JIMSONWEED_BLOCK.get(), "Jimsonweed Block");
+        add(ModBlocks.FORGING_TABLE.get(), "Forging Table");
+        add(ModBlocks.MODULAR_DISPLAY_FRAME.get(), "Modular Display Frame");
         add(ModItems.JIMSONWEED.get(), "Jimsonweed");
         add(ModItems.VOMIT.get(), "Vomit things");
         add(ModItems.INSOLE.get(), "Insole");
+        add(ModItems.NETHER_FORTRESS_COMPASS.get(), "Nether Fortress Compass");
         add(ModEffects.POISON_RESIST.get(),"Poison Resistance");
         add(ModEffects.FOOT_CLEAN.get(),"Clean Feet");
         add(ModEffects.FOOT_ODOR.get(),"Feet Odor");
@@ -39,9 +42,15 @@ public class ModLangGenEN extends LanguageProvider {
         add("modifier.tinkersmastermind.bluster","Bluster");
         add("modifier.tinkersmastermind.feeding","feeding");
         add("modifier.tinkersmastermind.foot_odor","Feet Odor");
+        add("modifier.tinkersmastermind.dumb", "Dumb");
+        add("modifier.tinkersmastermind.dumb.flavor", "It does absolutely nothing.");
+        add("modifier.tinkersmastermind.dumb.description", "Has no effect and only occupies one upgrade slot.");
         add("modifier.tinkersmastermind.poison_sparkle","Poison Sparkle");
         add("modifier.tinkersmastermind.poison_erosion","Poison Erosion");
         add("modifier.tinkersmastermind.heavy_poison","Heavy Poison");
+        add("jei.tinkersmastermind.forging", "Forging");
+        add("jei.tinkersmastermind.forging.temperature", "Temperature: %s-%s C");
+        add("jei.tinkersmastermind.forging.byproduct", "Failure output");
     }
 
 }

@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.qiuyu.tinkersmastermind.register.item.Jimsonweed;
 import net.qiuyu.tinkersmastermind.register.item.misc.Insole;
+import net.qiuyu.tinkersmastermind.register.item.misc.NetherFortressCompass;
 import net.qiuyu.tinkersmastermind.register.item.misc.Vomit;
 import net.qiuyu.tinkersmastermind.register.item.ZombieIron;
 import net.qiuyu.tinkersmastermind.register.item.Coral;
@@ -24,6 +25,7 @@ public class ModItems {
     public static RegistryObject<Item> INSOLE = ITEMS.register("insole", Insole::register_item);
     public static RegistryObject<Item> CORAL = ITEMS.register("coral", Coral::register_item);
     public static RegistryObject<Item> CORAL_COPPER = ITEMS.register("coral_copper", CoralCopper::register_item);
+    public static RegistryObject<Item> NETHER_FORTRESS_COMPASS = ITEMS.register("nether_fortress_compass", NetherFortressCompass::register_item);
 
     public static BlockItem register_block(Block block) {
         return new BlockItem(block, new Item.Properties());

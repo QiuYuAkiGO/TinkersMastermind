@@ -2,6 +2,7 @@ package net.qiuyu.tinkersmastermind.register;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.qiuyu.tinkersmastermind.TinkersMastermind;
+import net.qiuyu.tinkersmastermind.tinkering.modifier.DumbModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.*;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.*;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.ranged.BlusterModifier;
@@ -33,4 +34,5 @@ public class ModModifiers {
     public static final StaticModifier<Modifier> Smash = MODIFIERS.register("smash",SmashModifier::new);
     public static final StaticModifier<Modifier> Stickin = MODIFIERS.register("stickin",StickinModifier::new);
     public static final StaticModifier<Modifier> LeapSlash = MODIFIERS.register("leap_slash",LeapSlashModifier::new);
+    public static final StaticModifier<DumbModifier> Dumb = MODIFIERS.register("dumb", DumbModifier::new);
 }

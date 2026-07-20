@@ -21,6 +21,8 @@ public class ModLangGenCN extends LanguageProvider {
         add("material.tinkersmastermind.zombie_iron","僵尸铁");
 
         add(ModBlocks.JIMSONWEED_BLOCK.get(), "曼陀罗合金块");
+        add(ModBlocks.FORGING_TABLE.get(), "锻打台");
+        add(ModBlocks.MODULAR_DISPLAY_FRAME.get(), "组合展示框");
         add(ModItems.JIMSONWEED.get(), "曼陀罗合金");
         add("material.tinkersmastermind.jimsonweed","曼陀罗");
 
@@ -29,6 +31,7 @@ public class ModLangGenCN extends LanguageProvider {
 
         add(ModItems.VOMIT.get(), "呕吐物");
         add(ModItems.INSOLE.get(), "鞋垫");
+        add(ModItems.NETHER_FORTRESS_COMPASS.get(), "下界堡垒指南针");
         add(ModEffects.POISON_RESIST.get(),"猛毒耐性");
         add(ModEffects.FOOT_CLEAN.get(),"干净的脚");
         add(ModEffects.FOOT_ODOR.get(),"脚臭");
@@ -53,6 +56,9 @@ public class ModLangGenCN extends LanguageProvider {
         add("modifier.tinkersmastermind.bluster","爆裂");
         add("modifier.tinkersmastermind.feeding","投喂");
         add("modifier.tinkersmastermind.foot_odor","脚臭");
+        add("modifier.tinkersmastermind.dumb", "愚钝");
+        add("modifier.tinkersmastermind.dumb.flavor", "毫无意义。");
+        add("modifier.tinkersmastermind.dumb.description", "没有任何效果，只会占用一个升级槽。");
         add("modifier.tinkersmastermind.shield_breaking","碎盾者");
         add("modifier.tinkersmastermind.smash","锤击");
         add("modifier.tinkersmastermind.stickin","见缝插针");
@@ -100,6 +106,9 @@ public class ModLangGenCN extends LanguageProvider {
         add("modifier.tinkersmastermind.coral_hardening","珊瑚硬化");
         add("modifier.tinkersmastermind.coral_hardening.flavor","海洋的守护.");
         add("modifier.tinkersmastermind.coral_hardening.description","溺水时,减少受到的窒息伤害,回复氧气值与速度提升效果.");
+        add("jei.tinkersmastermind.forging", "锻打");
+        add("jei.tinkersmastermind.forging.temperature", "锻打温度：%s-%s C");
+        add("jei.tinkersmastermind.forging.byproduct", "失败产物");
 
     }
 }

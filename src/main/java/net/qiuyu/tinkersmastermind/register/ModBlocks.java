@@ -6,7 +6,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.qiuyu.tinkersmastermind.register.block.ForgingTableBlock;
 import net.qiuyu.tinkersmastermind.register.block.JimsonweedBlock;
+import net.qiuyu.tinkersmastermind.register.block.ModularDisplayFrameBlock;
 import net.qiuyu.tinkersmastermind.register.block.ZombieIronBlock;
 
 import java.util.function.Supplier;
@@ -20,6 +22,10 @@ public class ModBlocks {
             () -> new Block(ZombieIronBlock.properties()));
     public static final RegistryObject<Block> JIMSONWEED_BLOCK = registerBlock("jimsonweed_block",
             () -> new Block(JimsonweedBlock.properties()));
+    public static final RegistryObject<Block> FORGING_TABLE = registerBlock("forging_table",
+            () -> new ForgingTableBlock(ForgingTableBlock.properties()));
+    public static final RegistryObject<Block> MODULAR_DISPLAY_FRAME = registerBlock("modular_display_frame",
+            () -> new ModularDisplayFrameBlock(ModularDisplayFrameBlock.properties()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

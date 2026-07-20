@@ -126,6 +126,9 @@ target.setDeltaMovement(
     y,
     dir.z * 0.15
 );
+            if (target instanceof ServerPlayer playerMP) {
+              TinkerNetwork.getInstance().sendVanillaPacket(new ClientboundSetEntityMotionPacket(target), playerMP);
+            }
 
 target.hasImpulse = true;
 

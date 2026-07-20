@@ -1,0 +1,28 @@
+{
+  "multipart": [
+    {
+      "when": { "facing": "north", "group_size": "1", "has_item": "false" },
+      "apply": { "model": "tinkersmastermind:block/modular_display_frame" }
+    },
+    {
+      "when": { "facing": "south", "group_size": "1", "has_item": "false" },
+      "apply": { "model": "tinkersmastermind:block/modular_display_frame", "y": 180 }
+    },
+    {
+      "when": { "facing": "east", "group_size": "1", "has_item": "false" },
+      "apply": { "model": "tinkersmastermind:block/modular_display_frame", "y": 90 }
+    },
+    {
+      "when": { "facing": "west", "group_size": "1", "has_item": "false" },
+      "apply": { "model": "tinkersmastermind:block/modular_display_frame", "y": 270 }
+    },
+    {
+      "when": { "facing": "up", "group_size": "1", "has_item": "false" },
+      "apply": { "model": "tinkersmastermind:block/modular_display_frame", "x": 270 }
+    },
+    {
+      "when": { "facing": "down", "group_size": "1", "has_item": "false" },
+      "apply": { "model": "tinkersmastermind:block/modular_display_frame", "x": 90 }
+    }
+  ]
+}

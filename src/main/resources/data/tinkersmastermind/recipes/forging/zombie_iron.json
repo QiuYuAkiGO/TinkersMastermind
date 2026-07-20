@@ -1,0 +1,19 @@
+{
+  "type": "tinkersmastermind:forging",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    }
+  ],
+  "temperature": 800,
+  "tolerance": 50,
+  "result": {
+    "item": "tinkersmastermind:zombie_iron"
+  },
+  "byproduct": {
+    "item": "minecraft:iron_nugget"
+  }
+}
